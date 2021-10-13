@@ -36,3 +36,9 @@ p {
     display: inline-block;
     padding-left: 10px;
   }
+
+  app-footer {
+    position: fixed;
+    bottom: 0px;
+
+  }

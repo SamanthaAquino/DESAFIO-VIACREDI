@@ -2,12 +2,14 @@
     flex: 1 1 auto;
   }
 
-  .btn-viacredi {
+.btn-viacredi {
     border-radius: 10px;
     border-color: #00838f;
     border-width: 0.5px;
     margin: 5px;
     padding: 5px;
+    cursor: pointer;
+    background-color: white;
 }
 
 .caminho {

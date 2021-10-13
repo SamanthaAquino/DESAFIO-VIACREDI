@@ -1,5 +1,7 @@
+import { ModalCpfInvalidoComponent } from './../modal-cpf-invalido/modal-cpf-invalido.component';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
 
 export interface Cooperado {
   Cpf: string,
@@ -16,6 +18,13 @@ const baseCPF = [
     Situacao: true,
     ContaAplicacao: "557932-4",
     ContaCorrente: "778461-8"
+  },
+  {
+    Cpf: "00000000000",
+    Nome: "João da Silva",
+    Situacao: false,
+    ContaAplicacao: "395836-5",
+    ContaCorrente: "725165-9"
   }
 ]
 
@@ -27,12 +36,14 @@ const baseCPF = [
 
 export class BuscaCpfComponent implements OnInit {
   cooperado = {} as Cooperado;
+  isCooperado = false;
+  cpfError = false;
 
   cpfFormControl = new FormControl('', [
-    Validators.required
+    Validators.required,
   ]);
 
-  constructor() { }
+  constructor(private dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
@@ -44,11 +55,19 @@ export class BuscaCpfComponent implements OnInit {
       return cpf_busca.Cpf === cpf_aux;
     })[0]
 
-    this.cooperado = this.cooperado ? this.cooperado : {} as Cooperado;
+    if (this.cooperado) {
+      this.isCooperado = true;
+      this.cpfError = false;
+    }
+    else {
+      this.cooperado = {} as Cooperado;
+      this.isCooperado = false;
+      this.cpfError = true;
+
+      this.dialog.open(ModalCpfInvalidoComponent);
+    }
   }
 
 }
-
-
 
 

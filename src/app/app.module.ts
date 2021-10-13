@@ -23,9 +23,8 @@ import { MatInputModule } from '@angular/material/input';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BuscaCpfComponent } from './screens/busca-cpf/busca-cpf.component';
 import { MatCardModule } from '@angular/material/card';
-
-
-
+import { ModalCpfInvalidoComponent } from './screens/modal-cpf-invalido/modal-cpf-invalido.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -34,7 +33,8 @@ import { MatCardModule } from '@angular/material/card';
     FooterComponent,
     MenuComponent,
     MainComponent,
-    BuscaCpfComponent
+    BuscaCpfComponent,
+    ModalCpfInvalidoComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,9 +51,11 @@ import { MatCardModule } from '@angular/material/card';
     MatInputModule,
     FormsModule,
     ReactiveFormsModule,
-    MatCardModule
+    MatCardModule,
+    MatDialogModule
   ],
   providers: [],
+  entryComponents: [ModalCpfInvalidoComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

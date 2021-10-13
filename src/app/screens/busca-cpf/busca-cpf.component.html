@@ -6,7 +6,7 @@
     <form class="form-busca-cpf">
         <mat-form-field class="full-width" appearance="outline">
             <mat-label>CPF</mat-label>
-            <input type="text" matInput [formControl]="cpfFormControl" placeholder="000.000.000-00">
+            <input type="text" matInput [formControl]="cpfFormControl" placeholder="000.000.000-00" name="cpf">
             <mat-error *ngIf="cpfFormControl.hasError('required')">
                 CPF é <strong>obrigatório</strong>
             </mat-error>
@@ -24,14 +24,21 @@
                 <mat-icon mat-list-icon class="icon-card">perm_identity</mat-icon>
                 <span class="icon-card">
                     <p>Nome</p>
-                    <p>teste</p>
+                    <p>{{cooperado.Nome}}</p>
                 </span>
             </div>
-            <div>
+            <div *ngIf="cooperado.Situacao">
                 <mat-icon mat-list-icon class="icon-card" style="color: green;">check_circle</mat-icon>
                 <span class="icon-card">
                     <p>Situação do CPF</p>
-                    <p>teste</p>
+                    <p>Regular</p>
+                </span>
+            </div>
+            <div *ngIf="!cooperado.Situacao">
+                <mat-icon mat-list-icon class="icon-card" style="color: red;">cancel</mat-icon>
+                <span class="icon-card">
+                    <p>Situação do CPF</p>
+                    <p>Irregular</p>
                 </span>
             </div>
 
@@ -47,7 +54,7 @@
                 <mat-icon mat-list-icon class="icon-card">credit_card</mat-icon>
                 <span class="icon-card">
                     <p>Número da conta</p>
-                    <p>teste</p>
+                    <p>{{cooperado.ContaAplicacao}}</p>
                 </span>
             </div>
         </mat-card-content>
@@ -65,7 +72,7 @@
                 <mat-icon mat-list-icon class="icon-card">credit_card</mat-icon>
                 <span class="icon-card">
                     <p>Número da conta</p>
-                    <p>teste</p>
+                    <p>{{cooperado.ContaCorrente}}</p>
                 </span>
             </div>
         </mat-card-content>
@@ -73,6 +80,6 @@
             <button mat-button color="primary">Duplicar conta</button>
         </mat-card-actions>
     </mat-card>
-
-
 </div>
+
+<app-footer [cooperado]="isCooperado"></app-footer>

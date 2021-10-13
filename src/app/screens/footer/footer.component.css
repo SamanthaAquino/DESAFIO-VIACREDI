@@ -1,0 +1,30 @@
+mat-toolbar {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 50px;
+    background-color: #ffffff;
+}
+
+.btn-dicas {
+    border-radius: 3px;
+    border-color: #00838f;
+    border-width: 0.5px;
+    margin: 5px;
+    padding: 7px;
+    cursor: pointer;
+    background-color: white;
+    margin-left: 20px;
+}
+
+.btn-admissao {
+    border-radius: 3px;
+    border-width: 0.5px;
+    margin: 5px;
+    padding: 7px;
+    cursor: pointer;
+    color: white;
+    background-color: #00838f;
+    border-color: #00838f;
+    margin-left: 20px;
+}
