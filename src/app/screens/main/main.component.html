@@ -1,0 +1,20 @@
+<mat-stepper labelPosition="bottom" #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+        <form>
+            <ng-template matStepLabel>Inicio</ng-template>
+        </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup">
+        <form>
+            <ng-template matStepLabel>Documentos</ng-template>
+        </form>
+    </mat-step>
+    <mat-step [stepControl]="thirdFormGroup">
+        <form>
+            <ng-template matStepLabel>Dados cadastrais</ng-template>
+        </form>
+    </mat-step>
+    <mat-step [stepControl]="fourthFormGroup">
+        <ng-template matStepLabel>Admissão</ng-template>
+    </mat-step>
+</mat-stepper>

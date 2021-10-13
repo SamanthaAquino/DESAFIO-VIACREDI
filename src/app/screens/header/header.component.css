@@ -1,0 +1,33 @@
+.spacer {
+    flex: 1 1 auto;
+  }
+
+  .btn-viacredi {
+    border-radius: 10px;
+    border-color: #00838f;
+    border-width: 0.5px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.caminho {
+    margin-top: -5px;
+    color: gray;
+    font-size: 12px;
+}
+
+mat-toolbar {
+    height: 80px;
+    background-color: white;
+    align-items: center;
+}
+
+div {
+    height: 100%;
+    margin-top: 15px;
+}
+
+app-main {
+    display: flex;
+    justify-content: center;
+}

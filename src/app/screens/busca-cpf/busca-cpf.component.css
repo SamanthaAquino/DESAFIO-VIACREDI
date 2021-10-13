@@ -1,0 +1,38 @@
+div {
+    margin-left: 2%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    line-height: 2px;
+    font-size: 14px;
+    color: gray;
+}
+
+.form-busca-cpf {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .full-width {
+    padding-top: 2%;
+    width: 60%;
+  }
+  
+  .btn-consulta{
+    margin-left: 10%;
+  }
+
+  .example-card {
+    width: 300px;
+    height: 160px;
+    vertical-align: top;
+    display: inline-block;
+    margin-right: 30px;
+  }
+
+  .icon-card{
+    display: inline-block;
+    padding-left: 10px;
+  }

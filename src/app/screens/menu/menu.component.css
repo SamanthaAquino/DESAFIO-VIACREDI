@@ -1,0 +1,19 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+    background-color: #e6eef1;
+  }
+
+mat-sidenav {
+  width: 100px;
+    background:  #005c7f;
+    justify-content: center;
+}
+
+mat-list-item {
+  display: flex;
+  height: 10%;
+  color: white;
+  justify-content: center;
+}

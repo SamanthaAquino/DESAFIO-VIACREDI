@@ -1,0 +1,9 @@
+.mat-form-field {
+    margin-top: 16px;
+  }
+
+mat-stepper {
+    background: #e6eef1;
+    width: 50%;
+}
+
